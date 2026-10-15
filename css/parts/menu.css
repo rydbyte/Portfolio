@@ -1,0 +1,95 @@
+#menu {
+    background-color: var(--grey);
+    color: var(--azure);
+    width: 15%;
+    min-width: 200px;
+    z-index: 999;
+    height: 100vh;
+    border-right: 2px solid var(--grey2);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    position: relative;
+    margin: 0;
+}
+
+#menu-buttons {
+    display: flex;
+    font-size: var(--regular);
+    height: 100%;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--azure);
+}
+
+.side-link {
+    transition: color .2s ease, transform .2s ease;
+}
+
+.line {
+    width: 0;
+    background-color: var(--azure);
+    border-radius: 0.1rem;
+    height: 0.8px;
+    transition: background-color .2s ease, width .25s ease;
+}
+
+.button.active .side-link {
+    color: var(--red);
+}
+
+.button.active .line {
+    width: 170px;
+    background-color: var(--red);
+}
+
+.side-link:hover {
+    transform: scale(1.12);
+    cursor: pointer;
+}
+
+.button:hover .line {
+    animation: typing 0.2s steps(40, end) forwards;
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        width: 100%;
+        min-width: 0;
+        height: 10vh;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom: 2px solid var(--grey2);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+
+    #menu-buttons {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 0.1rem;
+    }
+
+    .button.active .line {
+        width: 100%;
+    }
+
+    .side-link:hover {
+        transform: scale(1.12);
+        cursor: pointer;
+    }
+
+    .button:hover .line {
+       animation: none;
+    }
+
+}

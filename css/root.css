@@ -1,0 +1,15 @@
+:root{
+    /* Colors */
+    --azure: #F0FFFF;
+    --black: #000711;
+    --grey: #171616;
+    --grey2: #3f3f3f;
+    --grey3: rgb(0 0 0 / 0.4);
+    --red: #D22B2B;
+    --coolred: #DC143C;
+    --azure-transparent: rgba(240, 255, 255, 0.3);
+
+    /*Font Sizes */
+    --regular: clamp(16px, 2vw + 10px, 1.8rem);
+    --large: clamp(18px, 4vw + 15px, 2rem);
+}

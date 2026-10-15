@@ -1,0 +1,4 @@
+#photo{
+    width: clamp(400px, 20vw, 400px);
+    border: 2px solid var(--grey2);
+}

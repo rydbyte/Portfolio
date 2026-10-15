@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--black);
+    font-weight: bold;
+    overflow: hidden;
+}
+
+img {
+    width: clamp(50px, 4vw, 70px);
+    aspect-ratio: 1;
+    display: block;
+}
+
+p {
+    width: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--azure);
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#right-container {
+    text-align: left;
+    color: var(--azure);
+    width: 85%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#home-container,
+#about-container,
+#project-container,
+#skills-container {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    scroll-snap-align: end;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    color: var(--azure);
+}
+
+@media screen and (max-width: 800px) {
+    #wrapper {
+        flex-direction: column;
+    }
+    #right-container {
+        width: 100%;
+        height: 90vh;
+    }
+}
