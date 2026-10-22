@@ -1,6 +1,7 @@
 @media screen and (max-width: 900px) {
     html, body {
         overflow-x: hidden;
+        overflow-y: hidden;
     }
 
     :has(> #menu),
