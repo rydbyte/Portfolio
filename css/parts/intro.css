@@ -1,40 +1,13 @@
-#intro,
-#about {
-    font-size: var(--large);
+#intro {
+    font-size: var(--largefs);
+    color: var(--text);
     flex: 1 1 320px;
     width: 100%;
 }
 
-#buttons {
-    margin: 1rem 0 0 0;
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-    align-items: center;
-}
-
-#buttons a {
-    font-size: 1rem;
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    text-align: center;
-    border-color: var(--coolred);
-    border-radius: 0.5rem;
-    color: var(--azure);
-    background-color: var(--coolred);
-    width: 12%;
-    line-height: 1.1;
-    height: 1rem;
-    border-style: solid;
-    transition: background-color .7s ease, transform .5s ease;
-}
-
-#buttons a:hover {
-    transform: scale(1.1);
-}
-
 @media screen and (max-width: 800px) {
-   #buttons a{
-       width: 80%;
-   }
+    #buttons a {
+        min-width: 0;
+        width: 80%;
+    }
 }

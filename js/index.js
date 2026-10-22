@@ -25,6 +25,7 @@ let sectionButtonMap = {
     'about-container': buttons[1],
     'project-container': buttons[2],
     'skills-container': buttons[3],
+    'contact-container': buttons[4],
 };
 
 let sectionButtonMapProjects = {};

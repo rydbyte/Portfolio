@@ -3,8 +3,11 @@
     height: 60%;
     display: flex;
     flex-direction: row;
-    border: 2px solid var(--grey2);
+    border: 2px solid var(--accent-1);
     box-sizing: border-box;
+    color: var(--text);
+    background-color: var(--fg);
+    box-shadow: var(--box-shadow);
 }
 
 #left-container-skills {
@@ -13,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-right: 2px solid var(--grey2);
+    border-right: 2px solid var(--accent-1);
     flex-direction: column;
     box-sizing: border-box;
 }
@@ -36,23 +39,37 @@
     width: 90%;
 }
 
+.skill-item .icon {
+    color: var(--accent-3);
+    font-size: var(--xlfs);
+    padding-right: 0.5rem;
+}
+
 .skill-item p {
     width: auto;
     margin: 0;
+    font-size: var(--mediumfs);
 }
 
 .bar {
     flex: 1;
     min-width: 2rem;
     height: 0.6rem;
-    background-color: var(--azure-transparent);
+    background-color: var(--fg-alt);
+    border: 1px solid var(--accent-1);
     border-radius: 5rem;
+    overflow: hidden;
 }
 
 .fore-bar {
-    background-color: var(--azure);
+    background-color: var(--accent-2);
     border-radius: 5rem;
     height: 100%;
+}
+
+#explanation {
+    padding: 1rem;
+    font-size: var(--smallfs);
 }
 
 @media screen and (max-width: 800px) {
@@ -74,7 +91,7 @@
         gap: 0.5rem;
         padding: 0.75rem;
         border-right: none;
-        border-bottom: 2px solid var(--grey2);
+        border-bottom: 2px solid var(--accent-1);
     }
 
     #right-container-skills {
@@ -89,14 +106,12 @@
         gap: 0.5rem;
     }
 
-    .skill-item img {
-        width: 2rem;
-        flex: 0 0 2rem;
-        object-fit: contain;
+    .skill-item .icon {
+        font-size: var(--largefs);
     }
 
     .skill-item p {
-        font-size: 0.85rem;
+        font-size: var(--smallfs);
     }
 
     .skill-item p:first-of-type {

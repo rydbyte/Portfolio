@@ -1,0 +1,43 @@
+#contact span {
+    font-size: var(--xxlfs);
+}
+
+#contact a {
+    font-size: var(--xlfs);
+}
+
+#buttons {
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+#buttons a {
+    font-size: var(--mediumfs);
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--accent-2);
+    border-radius: 0.5rem;
+    color: var(--text);
+    background-color: var(--accent-2);
+    box-shadow: var(--box-shadow);
+    min-width: 8rem;
+    line-height: 1.1;
+    transition: background-color .7s ease, transform .5s ease;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#buttons a:hover {
+    background-color: var(--accent-3);
+    border-color: var(--accent-3);
+    transform: scale(1.1);
+}

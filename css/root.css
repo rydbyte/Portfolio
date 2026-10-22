@@ -1,15 +1,50 @@
-:root{
-    /* Colors */
-    --azure: #F0FFFF;
-    --black: #000711;
-    --grey: #171616;
-    --grey2: #3f3f3f;
-    --grey3: rgb(0 0 0 / 0.4);
-    --red: #D22B2B;
-    --coolred: #DC143C;
-    --azure-transparent: rgba(240, 255, 255, 0.3);
+@font-face {
+    font-family: AgaveNFM; /* set name */
+    src: url(../resources/AgaveNerdFontMono-Regular.ttf); /* url of the font */
+}
 
-    /*Font Sizes */
-    --regular: clamp(16px, 2vw + 10px, 1.8rem);
-    --large: clamp(18px, 4vw + 15px, 2rem);
+:root {
+
+    /*font*/
+    --primary-font: "AgaveNFM", monospace;
+
+    /*font sizes*/
+    --smallfs: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
+    --mediumfs: clamp(1.1rem, 1rem + 0.35vw, 1.35rem);
+    --largefs: clamp(1.35rem, 1.1rem + 0.7vw, 1.75rem);
+    --xlfs: clamp(1.75rem, 1.3rem + 1.5vw, 2.75rem);
+    --xxlfs: clamp(3rem, 2.5rem + 3.5vw, 4rem);
+
+    /*colors*/
+    --bg: #1B262C;
+    --fg: #223038;
+    --fg-alt: #2a3a43;
+
+    --text: #BBE1FA;
+    --navbar: rgb(27 38 44 / 0.85);
+
+    --accent-1: rgb(50 130 184 / 0.7);
+    --accent-2: #299eeb;
+    --accent-3: #3282B8;
+
+    --box-shadow: rgba(187, 225, 250, 0.18) 0px 2px 3px;
+}
+
+:root[data-theme="light"] {
+
+    --cursor-color: #1B262C;
+
+    /*colors*/
+    --bg: #f2f9ff;
+    --fg: #e3f1fc;
+    --fg-alt: #BBE1FA;
+
+    --text: #1B262C;
+    --navbar: rgb(187 225 250 / 0.75);
+
+    --accent-1: rgb(15 76 117 / 0.7);
+    --accent-2: #3282B8;
+    --accent-3: #0F4C75;
+
+    --box-shadow: rgba(27, 38, 44, 0.18) 0px 2px 3px;
 }

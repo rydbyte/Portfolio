@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Portfolio</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/root.css" rel="stylesheet">
@@ -13,7 +13,7 @@
     <link href="css/parts/about.css" rel="stylesheet">
     <link href="css/parts/projects.css" rel="stylesheet">
     <link href="css/parts/skills.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/parts/contact.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,39 +21,40 @@
     <div id="menu">
         <div id="menu-buttons">
             <div class="button">
-                <a class="side-link" href="#home-container"><i class="fa fa-home"></i> Home</a>
+                <a class="side-link" href="#home-container"><span class="icon"></span>Home</a>
                 <div class="line"></div>
             </div>
             <div class="button">
-                <a class="side-link" href="#about-container"><i class="fa fa-user"></i> About</a>
+                <a class="side-link" href="#about-container"><span class="icon"></span>Info</a>
                 <div class="line"></div>
             </div>
             <div class="button">
-                <a class="side-link" href="#project-container"><i class="fa fa-list"></i> Projects</a>
+                <a class="side-link" href="#project-container"><span class="icon">󱉟</span>Projects</a>
                 <div class="line"></div>
             </div>
             <div class="button">
-                <a class="side-link" href="#skills-container"><i class="fa fa-expand"></i> Skills</a>
+                <a class="side-link" href="#skills-container"><span class="icon"></span>Skills</a>
                 <div class="line"></div>
             </div>
             <div class="button">
-                <a class="side-link"><i class="fa fa-comments"></i> Contact</a>
+                <a class="side-link" href="#contact-container"><span class="icon"></span>Contact</a>
                 <div class="line"></div>
             </div>
         </div>
+        <div class="icon" id="theme-switcher" onclick="toggleTheme()"></div>
     </div>
     <div id="right-container">
         <div id="home-container">
             <div id="intro">
-                Hi! My name is Ryan Leibbrand. I'm a software developer based in the Netherlands, and this is my portfolio.
-                <div id="buttons">
-                    <a href="resources/cv.pdf" target="_blank">CV</a>
-                    <a>CONTACT ME</a>
-                </div>
+                Hi! My name is Ryan Leibbrand. I'm a software developer based in the Netherlands, and this is my
+                portfolio.
             </div>
         </div>
         <div id="about-container">
-            <div id="about">about about about about about about about about.</div>
+            <div id="about">I'm 17 and currently studying Software Development at Nova College. In my free time I play
+                guitar, read or work on personal projects. I recently started learning Rust as a new programming
+                language.
+            </div>
             <img alt="cat" id="photo" src="imgs/cat.png">
         </div>
         <div id="project-container">
@@ -80,9 +81,9 @@
                 </div>
 
                 <div id="nav-projects">
-                    <a id="project1" href="#project1"></a>
-                    <a id="project2" href="#project2"></a>
-                    <a id="project3" href="#project3"></a>
+                    <a href="#project1" id="project1"></a>
+                    <a href="#project2" id="project2"></a>
+                    <a href="#project3" id="project3"></a>
                 </div>
             </div>
         </div>
@@ -90,50 +91,59 @@
             <div id="skills-center">
                 <div id="left-container-skills">
                     <div>Explanation</div>
-                    <div>
-                        aaaaaaa
+                    <div id="explanation">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
                 </div>
                 <div id="right-container-skills">
-                    <div class="skill-item"><img alt="html" src="imgs/html.png">
-                        <p>HTML</p>
+                    <div class="skill-item">
+                        <p><span class="icon">󰌝</span>HTML</p>
                         <div class="bar">
                             <div class="fore-bar" style="width: 80%"></div>
                         </div>
                         <p>80%</p>
                     </div>
-                    <div class="skill-item"><img alt=css"" src="imgs/css.png">
-                        <p>CSS</p>
+                    <div class="skill-item">
+                        <p><span class="icon"></span>CSS</p>
                         <div class="bar">
                             <div class="fore-bar" style="width: 70%"></div>
                         </div>
                         <p>70%</p>
                     </div>
-                    <div class="skill-item"><img alt="js" src="imgs/js.png">
-                        <p>JS</p>
+                    <div class="skill-item">
+                        <p><span class="icon"></span>JS</p>
                         <div class="bar">
                             <div class="fore-bar" style="width: 70%"></div>
                         </div>
                         <p>70%</p>
                     </div>
-                    <div class="skill-item"><img alt="python" src="imgs/python.png">
-                        <p>PY</p>
+                    <div class="skill-item">
+                        <p><span class="icon"></span>PY</p>
                         <div class="bar">
                             <div class="fore-bar" style="width: 80%"></div>
                         </div>
                         <p>80%</p>
                     </div>
-                    <div class="skill-item"><img alt="c#" src="imgs/csharp.png">
-                        <p>C#</p>
+                    <div class="skill-item">
+                        <p><span class="icon"></span>C#</p>
                         <div class="bar">
-                            <div class="fore-bar" style="width: 80%"></div>
+                            <div class="fore-bar" style="width: 75%"></div>
                         </div>
                         <p>80%</p>
                     </div>
-                    <div class="skill-item"><img alt="php" src="imgs/php.png">
-                        <p>PHP</p>
+                    <div class="skill-item">
+                        <p><span class="icon"></span>PHP</p>
                         <div class="bar">
-                            <div class="fore-bar" style="width: 80%"></div>
+                            <div class="fore-bar" style="width: 70%"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+                    <div class="skill-item">
+                        <p><span class="icon"></span>Rust</p>
+                        <div class="bar">
+                            <div class="fore-bar" style="width: 60%"></div>
                         </div>
                         <p>80%</p>
                     </div>
@@ -141,12 +151,20 @@
             </div>
         </div>
         <div id="contact-container">
-
+            <div id="contact">
+                <a href="https://www.linkedin.com/in/ryan-leibbrand-b143773a6" target="_blank"><span
+                        class="icon"></span>My
+                    LinkedIn</a>
+                <a href="https://github.com/rydbyte" target="_blank"><span class="icon"></span>My Github</a>
+                <a href="resources/cv.pdf" target="_blank"><span class="icon">󱛉</span>My CV</a>
+                <a href="mailto:ryanleibbrand1@gmail.com"><span class="icon"></span>Contact Me</a>
+            </div>
         </div>
     </div>
 </div>
 <script src="js/index.js"></script>
 <script src="js/mouse.js"></script>
+<script src="js/theme.js"></script>
 </body>
 
 </html>

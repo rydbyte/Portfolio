@@ -1,4 +1,14 @@
-#photo{
+#about {
+    font-size: var(--mediumfs);
+    color: var(--text);
+    flex: 1 1 320px;
+    width: 100%;
+    max-height: 70vh;
+    padding: 1rem;
+}
+
+#photo {
     width: clamp(400px, 20vw, 400px);
-    border: 2px solid var(--grey2);
+    border: 2px solid var(--accent-1);
+    box-shadow: var(--box-shadow);
 }
