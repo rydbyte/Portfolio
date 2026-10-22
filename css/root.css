@@ -1,6 +1,6 @@
 @font-face {
     font-family: AgaveNFM; /* set name */
-    src: url(../resources/AgaveNerdFontMono-Regular.ttf); /* url of the font */
+    src: url(../resources/AgaveNerdFontMono-Regular.woff2); /* url of the font */
 }
 
 :root {
