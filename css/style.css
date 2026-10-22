@@ -64,7 +64,8 @@ a {
     color: var(--text);
 }
 
+#skills-container,
+#project-container,
 #contact-container {
-    align-items: start;
     flex-direction: column;
 }

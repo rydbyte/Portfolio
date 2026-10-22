@@ -5,7 +5,7 @@
 }
 
 #projects {
-    height: 100%;
+    height: 90%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -18,6 +18,10 @@
     scrollbar-width: none;
     border: 2px solid var(--accent-1);
     gap: 1rem;
+}
+
+#projects-container {
+    padding: 0.5rem;
 }
 
 .project {
