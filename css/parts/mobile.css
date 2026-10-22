@@ -13,7 +13,6 @@
         overflow: clip;
     }
 
-    /* top menu */
     #menu {
         flex: none;
         box-sizing: border-box;
@@ -27,18 +26,22 @@
 
     #menu-buttons {
         flex-direction: row;
-        justify-content: space-evenly;
-        font-size: var(--mediumfs);
-    }
-
-    #menu-buttons .icon {
-        font-size: var(--largefs);
-        margin-right: 0.2rem;
+        justify-content: center;
+        gap: 0.3rem;
     }
 
     .button {
         position: relative;
-        padding-bottom: 0.2rem;
+        padding: 0 0.6rem;
+    }
+
+    .side-link {
+        font-size: 0;
+    }
+
+    #menu-buttons .icon {
+        font-size: var(--xlfs);
+        margin-right: 0;
     }
 
     .line {
@@ -49,7 +52,7 @@
     }
 
     .button.active .line {
-        width: 100%;
+        width: 70%;
     }
 
     .button:hover .line {
@@ -78,7 +81,6 @@
         --line-width: 15vw;
     }
 
-    /* horizontal carousel */
     #right-container {
         flex: none;
         width: 100%;
@@ -90,14 +92,12 @@
         overscroll-behavior: contain;
     }
 
-    /* each section scrolls vertically on its own */
     #home-container, #about-container, #project-container,
     #skills-container, #contact-container {
         height: 100%;
         padding: 1rem;
         overflow-y: auto;
         overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
     }
 
     #home-container, #about-container {
@@ -118,7 +118,6 @@
         max-width: 280px;
     }
 
-    /* projects + skills: heading above content */
     #project-container, #skills-container {
         flex-direction: column;
         align-items: stretch;
@@ -139,7 +138,6 @@
         right: 0.5rem;
     }
 
-    /* skills */
     #skills-center {
         width: 100%;
         height: auto;
