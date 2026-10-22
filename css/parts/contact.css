@@ -1,9 +1,9 @@
 #contact span {
-    font-size: var(--xxlfs);
+    font-size: var(--xlfs);
 }
 
 #contact a {
-    font-size: var(--xlfs);
+    font-size: var(--largefs);
 }
 
 #buttons {

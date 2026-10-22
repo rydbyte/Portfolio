@@ -28,6 +28,8 @@
     --accent-3: #3282B8;
 
     --box-shadow: rgba(187, 225, 250, 0.18) 0px 2px 3px;
+
+    --line-width: 100%;
 }
 
 :root[data-theme="light"] {

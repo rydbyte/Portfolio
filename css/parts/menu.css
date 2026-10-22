@@ -3,7 +3,6 @@
     color: var(--accent-3);
     font-family: var(--primary-font);
     width: 15%;
-    min-width: 200px;
     z-index: 999;
     height: 100vh;
     border-top: 2px solid var(--accent-1);
@@ -62,10 +61,11 @@
 
 .button.active .side-link {
     color: var(--accent-2);
+
 }
 
 .button.active .line {
-    width: 170px;
+    width: var(--line-width);
     background-color: var(--accent-2);
 }
 
@@ -76,31 +76,4 @@
 
 .button:hover .line {
     animation: typing 0.2s steps(40, end) forwards;
-}
-
-@media screen and (max-width: 800px) {
-    #menu {
-        width: 100%;
-        min-width: 0;
-        height: 10vh;
-        border-right: none;
-        border-top-right-radius: 0;
-        border-bottom: 2px solid var(--accent-1);
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-    }
-
-    #menu-buttons {
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 0.1rem;
-    }
-
-    .button.active .line {
-        width: 100%;
-    }
-
-    .button:hover .line {
-        animation: none;
-    }
 }
