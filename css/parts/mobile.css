@@ -3,22 +3,25 @@
         height: 100dvh;
         min-height: 0;
         margin: 0;
-        overflow: hidden;
+        overflow: clip;
         overscroll-behavior: none;
     }
 
     #wrapper {
         flex-direction: column;
         height: 100dvh;
-        overflow: hidden;
+        overflow: clip;
     }
 
+    /* top menu */
     #menu {
-        flex: 0 0 auto;
+        flex: none;
         box-sizing: border-box;
         width: 100%;
+        min-width: 0;
         height: 3.5rem;
         border-top: none;
+        border-right: none;
         border-radius: 0 0 1rem 1rem;
     }
 
@@ -31,6 +34,30 @@
     #menu-buttons .icon {
         font-size: var(--largefs);
         margin-right: 0.2rem;
+    }
+
+    .button {
+        position: relative;
+        padding-bottom: 0.2rem;
+    }
+
+    .line {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .button.active .line {
+        width: 100%;
+    }
+
+    .button:hover .line {
+        animation: none;
+    }
+
+    .side-link:hover {
+        transform: none;
     }
 
     #theme-switcher {
@@ -47,22 +74,30 @@
         margin: 0;
     }
 
-    #right-container {
-        width: 100%;
-        height: auto;
-        flex: 1 1 0;
-        min-width: 0;
-        min-height: 0;
-        overflow-x: auto;
-        overflow-y: hidden;
+    :root {
+        --line-width: 15vw;
     }
 
+    /* horizontal carousel */
+    #right-container {
+        flex: none;
+        width: 100%;
+        height: calc(100dvh - 3.5rem);
+        min-width: 0;
+        align-items: stretch;
+        overflow-x: auto;
+        overflow-y: clip;
+        overscroll-behavior: contain;
+    }
+
+    /* each section scrolls vertically on its own */
     #home-container, #about-container, #project-container,
     #skills-container, #contact-container {
-        padding: 1rem;
         height: 100%;
+        padding: 1rem;
         overflow-y: auto;
         overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 
     #home-container, #about-container {
@@ -83,10 +118,28 @@
         max-width: 280px;
     }
 
-    :root {
-        --line-width: 15vw;
+    /* projects + skills: heading above content */
+    #project-container, #skills-container {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
     }
 
+    #projects-wrapper {
+        flex: 1 1 0;
+        min-height: 0;
+    }
+
+    .project div {
+        font-size: var(--largefs);
+        padding: 0.5rem;
+    }
+
+    #nav-projects {
+        right: 0.5rem;
+    }
+
+    /* skills */
     #skills-center {
         width: 100%;
         height: auto;
@@ -127,29 +180,5 @@
     .skill-item p:last-of-type {
         min-width: 2.4rem;
         text-align: right;
-    }
-
-    .project div {
-        font-size: var(--largefs);
-        padding: 0.5rem;
-    }
-
-    #nav-projects {
-        right: 0.5rem;
-    }
-
-    .button {
-        position: relative;
-    }
-
-    .line {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .button.active .line {
-        width: 100%;
     }
 }
