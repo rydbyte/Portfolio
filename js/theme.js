@@ -4,18 +4,18 @@ let switcher = document.getElementById("theme-switcher")
 const lightIcon = ""
 const darkIcon = "󰖔"
 
-function applyTheme(theme) {
-    root.setAttribute("data-theme", theme);
-    switcher.innerHTML = theme === "light" ? lightIcon : darkIcon
-
-}
-
 function toggleTheme() {
     const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
     localStorage.setItem("theme", next);
-    applyTheme(next);
+    root.setAttribute("data-theme", next);
+    switcher.innerHTML = next === "light" ? lightIcon : darkIcon
 }
 
-applyTheme(localStorage.getItem("theme"));
+if (localStorage.getItem("theme") === "light") {
+    switcher.innerHTML = lightIcon;
+    root.setAttribute("data-theme", "light");
+} else {
+    switcher.innerHTML = darkIcon;
+    root.setAttribute("data-theme", "dark");
+}
 
-// code from: https://github.com/NKijpma/portfolio
