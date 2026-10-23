@@ -2,7 +2,7 @@
     background-color: var(--navbar);
     color: var(--accent-3);
     font-family: var(--primary-font);
-    width: 15%;
+    width: 17%;
     z-index: 999;
     height: 100vh;
     border-top: 2px solid var(--accent-1);

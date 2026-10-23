@@ -34,7 +34,7 @@ a {
 #right-container {
     text-align: left;
     color: var(--text);
-    width: 85%;
+    width: 83%;
     height: 100vh;
     display: flex;
     align-items: center;
